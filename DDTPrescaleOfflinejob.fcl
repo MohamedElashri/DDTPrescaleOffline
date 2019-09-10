@@ -1,0 +1,32 @@
+#include "services.fcl"
+#include "DDTPrescaleOffline.fcl"
+process_name: Mono
+services:
+{
+  # Uncomment the services you'd like to include
+  scheduler:             { wantTracer: false wantSummary: true }
+  TFileService:          { fileName: "result.root" }
+  @table::standard_services
+}
+source:
+{
+  module_type: RootInput
+  maxEvents:  -1
+}
+outputs:
+{
+}
+# Define and configure some modules to do work on each event.
+# First modules are defined; they are scheduled later.
+# Modules are grouped by type.
+physics:
+{
+  analyzers:
+  {
+    Mono: @local::standard_mono
+  }
+  # Define the path for the analyzer modules, order does not matter.
+  ana: [ Mono ]
+  # end_paths is a keyword and contains the paths that do not modify the art::Event,
+  # ie. analyzers and output streams.  these all run simultaneously
+  end_paths:     [ ana ]
