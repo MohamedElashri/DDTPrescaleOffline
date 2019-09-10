@@ -1,0 +1,7 @@
+BEGIN_PROLOG
+standard_mono:
+{
+  module_type:  "Mono"
+  RawDataLabel: "daq"
+}
+END_PROLOG
