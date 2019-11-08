@@ -1,7 +1,7 @@
 ////////////////////////////////////////////////////////////////////////
 // Class:       Mono
 // Module Type: analyzer
-// File:        DDTPrescale_module.cc
+// File:        DDTPrescaleOffline_module.cc
 //
 // Generated at Thu Mar 14 13:30:55 2019 by Mohamed Elashri using artmod
 // from cetpkgsupport v1_14_01.
