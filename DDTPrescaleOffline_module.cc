@@ -108,11 +108,12 @@ std::cout << "Prescale = " << fprescale << std::endl;
 }
 void Mono::Mono::endSubRun(art::SubRun const & s)
 {
-// We want to get these numbers per SubRun so we print them in endSubRun level.
+// We want to get these these numbers per SubRun so we print them at endSubRun level.
 std::cout << "prescale total = " << prescale_sum << std::endl;
 std::cout << "n_events = " << n_events << std::endl;
 std::cout << "average prescale = " << prescale_mean << std::endl;
 }
+// now we assign art jobs for our branches
  void Mono::Mono::beginJob()
 {
   Job = tfs->make<TTree>("Trigger", "Trigger");
@@ -126,5 +127,6 @@ std::cout << "average prescale = " << prescale_mean << std::endl;
 void Mono::Mono::endJob()
  {
   // Implementation of optional member function here.
+  // I don't have other optional member function for now
 }
 DEFINE_ART_MODULE(Mono::Mono)
