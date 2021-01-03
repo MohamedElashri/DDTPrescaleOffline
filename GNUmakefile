@@ -13,7 +13,6 @@ LIB         := lib$(PACKAGE)
 LIBCXXFILES := $(wildcard *.cxx)
 JOBFILES    := $(wildcard *.fcl)
 LIBLINK    := -L$(SRT_PRIVATE_CONTEXT)/lib/$(SRT_SUBDIR) -L$(SRT_PUBLIC_CONTEXT)/lib/$(SRT_SUBDIR) -l$(PACKAGE)
-#SUBDIRS := Workshops/Reco2016 Workshops/YoungNOvA2017
 ########################################################################
 include SoftRelTools/standard.mk
 include SoftRelTools/arch_spec_art.mk
